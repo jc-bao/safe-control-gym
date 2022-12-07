@@ -2,7 +2,7 @@
 info_in_reset: False
 ctrl_freq: 60
 pyb_freq: 240
-physics: pyb
+physics: dyn
 gui: False
 quad_type: 2
 normalized_rl_action_space: False

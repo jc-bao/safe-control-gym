@@ -144,8 +144,10 @@ class BaseAviary(BenchmarkEnv):
         self.GND_EFF_H_CLIP = 0.25 * self.PROP_RADIUS * np.sqrt(
             (15 * self.MAX_RPM**2 * self.KF * self.GND_EFF_COEFF)
             / self.MAX_THRUST)
+
         # BenchmarkEnv constructor.
         super().__init__(gui=gui, verbose=verbose, **kwargs)
+        self.TIMESTEP = self.PYB_TIMESTEP
         # Connect to PyBullet.
         self.PYB_CLIENT = -1
         if gui:
