@@ -1,8 +1,5 @@
 # safe-control-gym
 
-
-
-
 Physics-based CartPole and Quadrotor [Gym](https://gym.openai.com) environments (using [PyBullet](https://pybullet.org/wordpress/)) with symbolic *a priori* dynamics (using [CasADi](https://web.casadi.org)) for **learning-based control**, and model-free and model-based **reinforcement learning** (RL). 
 
 These environments include (and evaluate) symbolic safety constraints and implement input, parameter, and dynamics disturbances to test the robustness and generalizability of control approaches. [[PDF]](https://arxiv.org/pdf/2108.06266.pdf)
@@ -22,6 +19,19 @@ These environments include (and evaluate) symbolic safety constraints and implem
 
 
 ## Install on Ubuntu/macOS
+
+> in mac, you need to install casadi manually
+
+```
+git clone https://github.com/casadi/casadi.git casadi
+cd casadi
+git checkout 3.5.5
+mkdir build
+cd build
+cmake -DWITH_PYTHON=ON -DWITH_PYTHON3=ON ..
+make
+sudo make install
+```
 
 ### Clone repo
 

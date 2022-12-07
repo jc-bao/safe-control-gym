@@ -2,7 +2,7 @@
 
 Example:
 
-    $ python3 3d_quad.py --overrides ./3d_quad.yaml
+    $ python 3d_quad.py --overrides ./3d_quad.yaml
 
 """
 import os

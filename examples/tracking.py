@@ -5,7 +5,7 @@ Notes:
 
 Run as:
 
-    $ python3 tracking.py --overrides ./tracking.yaml
+    $ python tracking.py --overrides ./tracking.yaml
 
 """
 import time
