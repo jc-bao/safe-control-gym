@@ -1,5 +1,14 @@
 # safe-control-gym
 
+## TODO list
+
+* Task1: implement an double integrator environment
+  * Make 2D UAVs PID controller hover workable. 
+  * Make 1D ~~~
+  * Remove Bullet but keep the protocal. 
+* Task2: varify environment with PID LQR MPC and RL
+* Task3: implement RMA
+
 Physics-based CartPole and Quadrotor [Gym](https://gym.openai.com) environments (using [PyBullet](https://pybullet.org/wordpress/)) with symbolic *a priori* dynamics (using [CasADi](https://web.casadi.org)) for **learning-based control**, and model-free and model-based **reinforcement learning** (RL). 
 
 These environments include (and evaluate) symbolic safety constraints and implement input, parameter, and dynamics disturbances to test the robustness and generalizability of control approaches. [[PDF]](https://arxiv.org/pdf/2108.06266.pdf)
