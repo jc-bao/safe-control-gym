@@ -44,7 +44,7 @@ def run(gui=None, max_steps=None):
                 
         # Create controller.
         env_func = partial(make,
-                           'quadrotor',
+                           'quadrotor-naive',
                            **config.quadrotor_config
                            )
         ctrl = make('pid',

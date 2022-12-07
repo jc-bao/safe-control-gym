@@ -119,7 +119,7 @@ def test_policy(config):
     msg = "eval_ep_length {:.2f} +/- {:.2f}\n".format(ep_lengths.mean(), ep_lengths.std())
     msg += "eval_ep_return {:.3f} +/- {:.3f}\n".format(ep_returns.mean(), ep_returns.std())
     print(msg)
-    if "frames" in results:
+        if "frames" in results:
         save_video(os.path.join(eval_output_dir, "video.gif"), results["frames"])
     control_agent.close()
     print("Evaluation done.")
