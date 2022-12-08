@@ -54,9 +54,10 @@ def run():
     out = '\t\tCost: ' + str(initial_info['symbolic_model'].cost_func).replace('vertcat', '').replace(', (',',\n\t\t\t(').replace(', @',',\n\t\t\t@')
     print_str_with_style(out, 0)
     print_str_with_style('\tConstraints:', 0)
-    for fun in initial_info['symbolic_constraints']:
-        out = '\t' + str(inspect.getsource(fun)).strip('\n')
-        print_str_with_style(out, 0)
+    if 'symbolic_constraints' in initial_info:
+        for fun in initial_info['symbolic_constraints']:
+            out = '\t' + str(inspect.getsource(fun)).strip('\n')
+            print_str_with_style(out, 0)
     print_str_with_style('\tA priori parameters:', 0)
     out = '\t\t' + str(initial_info['physical_parameters'])
     print_str_with_style(out, 0)
@@ -89,10 +90,12 @@ def run():
         print_str_with_style(out, 2)
 
         print_str_with_style('safe-control-gym API:', 0)
-        out = '\tConstraints evaluations: ' + str(info['constraint_values'])
-        print_str_with_style(out, 0)
-        out = '\tConstraints violation: ' + str(bool(info['constraint_violation']))
-        print_str_with_style(out, 0)
+        if 'constraint_values' in info:
+            out = '\tConstraints evaluations: ' + str(info['constraint_values'])
+            print_str_with_style(out, 0)
+        if 'constraint_violation' in info:
+            out = '\tConstraints violation: ' + str(bool(info['constraint_violation']))
+            print_str_with_style(out, 0)
 
         print('\n\n')
         # If an episode is complete, reset the environment.

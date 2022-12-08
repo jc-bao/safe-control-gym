@@ -3,7 +3,7 @@
 ## TODO list
 
 * Task1: implement an double integrator environment
-  * Make 2D UAVs PID controller hover workable. 
+  - [x] Make 2D UAVs PID controller hover workable. 
   * Make 1D ~~~
   * Remove Bullet but keep the protocal. 
 * Task2: varify environment with PID LQR MPC and RL
