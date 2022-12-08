@@ -35,6 +35,10 @@ register(id="pid",
          entry_point="safe_control_gym.controllers.pid.pid:PID",
          config_entry_point="safe_control_gym.controllers.pid:pid.yaml")
 
+register(id="pid1d",
+         entry_point="safe_control_gym.controllers.pid1d.pid:PID",
+         config_entry_point="safe_control_gym.controllers.pid1d:pid.yaml")
+
 register(id="ppo",
          entry_point="safe_control_gym.controllers.ppo.ppo:PPO",
          config_entry_point="safe_control_gym.controllers.ppo:ppo.yaml")

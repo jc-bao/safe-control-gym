@@ -12,6 +12,9 @@ import time
 import pybullet as p
 from functools import partial
 
+from icecream import install
+install()
+
 from safe_control_gym.utils.configuration import ConfigFactory
 from safe_control_gym.utils.registration import make
 from safe_control_gym.envs.benchmark_env import Task

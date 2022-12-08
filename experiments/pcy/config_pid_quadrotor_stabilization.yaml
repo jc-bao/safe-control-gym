@@ -7,17 +7,17 @@ quadrotor_config:
   physics: pyb
   quad_type: 1
   init_state:
-    # init_x: 1
-    # init_x_dot: 0.5
+    init_x: 1
+    init_x_dot: 0.5
     init_z: 2
     init_z_dot: 0
-    # init_theta: 0
-    # init_theta_dot: 0
+    init_theta: 0
+    init_theta_dot: 0
   randomized_init: False
   randomized_inertial_prop: False
   task: stabilization
   task_info:
-    stabilization_goal: [0 0.5]
+    stabilization_goal: [0, 0.5]
     stabilization_goal_tolerance: 0.01
   episode_len_sec: 6
   cost: quadratic

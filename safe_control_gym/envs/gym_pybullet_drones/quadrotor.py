@@ -806,6 +806,7 @@ class Quadrotor(BaseAviary):
         # Control cost.
         if self.COST == Cost.QUADRATIC:
             if self.TASK == Task.STABILIZATION:
+                ic(self.state, self.X_GOAL, self.current_preprocessed_action, self.U_GOAL, self.Q, self.R)
                 return float(-1 * self.symbolic.loss(x=self.state,
                                                      Xr=self.X_GOAL,
                                                      u=self.current_preprocessed_action,
